@@ -1,4 +1,6 @@
-module.exports = {
+import type { StorybookConfig } from '@storybook/core-common';
+
+export const rootMain: StorybookConfig = {
   stories: [],
   addons: ['@storybook/addon-essentials'],
   // uncomment the property below if you want to apply some webpack config globally
