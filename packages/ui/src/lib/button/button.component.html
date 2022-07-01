@@ -1,3 +1,38 @@
-<button class="button" #button [type]="type" [name]="name" [disabled]="disabled">
+<ng-container [ngSwitch]="type">
+  <a
+    class="btn"
+    *ngSwitchCase="'link'"
+    #button
+    [ngClass]="{
+      'btn--primary': variant === 'primary',
+      'btn--secondary': variant === 'secondary',
+      'btn--success': variant === 'success',
+      'btn--error': variant === 'error'
+    }"
+    [href]="href"
+    [attr.aria-disabled]="!!disabled"
+  >
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+
+  <button
+    class="btn"
+    *ngSwitchDefault
+    #button
+    [ngClass]="{
+      'btn--primary': variant === 'primary',
+      'btn--secondary': variant === 'secondary',
+      'btn--success': variant === 'success',
+      'btn--error': variant === 'error'
+    }"
+    [type]="type"
+    [name]="name"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+</ng-container>
+
+<ng-template #content>
   <ng-content></ng-content>
-</button>
+</ng-template>

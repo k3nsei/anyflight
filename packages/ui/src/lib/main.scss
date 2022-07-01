@@ -1,0 +1,34 @@
+@use 'sass:meta';
+
+@layer reset, theme, layout, components, utilities;
+
+@layer reset.normalize {
+  @include meta.load-css('~normalize.css');
+}
+
+@layer theme {
+  :root {
+    --accent: #ffbb00;
+    --error: red;
+    --subtleAccent: silver;
+    --quietText: #ffffff;
+    --quietHeader: #828885;
+    --defaultText: #000000;
+    --subtleText: #c0c0c0;
+    --mutedText: #616161;
+    --linkText: #2e2ebb;
+    --boxBackground: #ffffff;
+    --alternativeBackground: #f9f9f9;
+    --sideBackground: #ffffff;
+    --ledAccent: #adadad;
+    --ledBackground: #e9e9e9;
+    --gimbalBackground: #eee;
+    --gimbalCrosshair: var(--subtleAccent);
+    --switcherysecond: #c4c4c4;
+    --pushedButton-background: #c4c4c4;
+    --pushedButton-fontColor: #000000;
+    --hoverButton-background: #ffcc3e;
+    --superSubtleAccent: #cccccc;
+    --accentBorder: #ffbb00;
+  }
+}

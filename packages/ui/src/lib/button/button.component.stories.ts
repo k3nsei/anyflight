@@ -17,8 +17,19 @@ export default {
     },
     type: {
       control: 'select',
-      options: ['button', 'reset', 'submit'],
+      options: ['button', 'reset', 'submit', 'link'],
       defaultValue: 'button',
+    },
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'success', 'error'],
+      defaultValue: 'primary',
+    },
+    href: {
+      control: 'text',
+    },
+    name: {
+      control: 'text',
     },
     disabled: {
       control: 'boolean',
@@ -36,6 +47,7 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   template: `
     <anyflight-button
       [type]="type"
+      [variant]="variant"
       [name]="name"
       [disabled]="disabled"
       [autofocus]="autofocus"
