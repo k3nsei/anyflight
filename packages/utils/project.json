@@ -11,7 +11,14 @@
         "tsConfig": "packages/utils/tsconfig.lib.json",
         "packageJson": "packages/utils/package.json",
         "main": "packages/utils/src/index.ts",
-        "assets": ["packages/utils/*.md"]
+        "assets": [
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
+          },
+          "packages/utils/*.md"
+        ]
       }
     },
     "lint": {
