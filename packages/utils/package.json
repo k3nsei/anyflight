@@ -1,4 +1,11 @@
 {
   "name": "@anyflight/utils",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "type-fest": "^2.18.0"
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.21",
+    "nanoid": "^4.0.0"
+  }
 }

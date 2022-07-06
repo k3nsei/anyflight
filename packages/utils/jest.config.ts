@@ -2,9 +2,8 @@
 export default {
   displayName: 'utils',
   preset: '../../jest.preset.js',
-  testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
+    '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/packages/utils',

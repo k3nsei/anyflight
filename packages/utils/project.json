@@ -2,23 +2,33 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/utils/src",
   "projectType": "library",
+  "tags": ["type:utils"],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/utils",
         "tsConfig": "packages/utils/tsconfig.lib.json",
-        "packageJson": "packages/utils/package.json",
-        "main": "packages/utils/src/index.ts",
-        "assets": ["packages/utils/*.md"]
+        "project": "packages/utils/package.json",
+        "entryFile": "packages/utils/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "packages/utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/utils/**/*.ts"]
+        "lintFilePatterns": ["packages/utils/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
@@ -29,6 +39,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "tags": ["type:utils"]
+  }
 }

@@ -8,13 +8,17 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2021",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2021", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@anyflight/icons": ["packages/icons/src/index.ts"],
+      "@anyflight/ui": ["packages/ui/src/index.ts"],
+      "@anyflight/ui-two": ["packages/ui-two/src/index.ts"],
+      "@anyflight/ui": ["packages/ui/src/index.ts"],
       "@anyflight/utils": ["packages/utils/src/index.ts"]
     }
   },
