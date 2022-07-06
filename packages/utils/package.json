@@ -1,4 +1,16 @@
 {
   "name": "@anyflight/utils",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "description": "Config driven modern UI for Betaflight/EmuFlight/INAV",
+  "homepage": "https://github.com/k3nsei/anyflight",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3nsei/anyflight.git"
+  },
+  "license": "GPL-3.0",
+  "author": "The Anyflight open source project",
+  "dependencies": {
+    "@swc/helpers": "~0.3.3"
+  },
+  "devDependencies": {}
 }
