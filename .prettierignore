@@ -1,4 +1,7 @@
 # Add files here to ignore them from prettier formatting
 
+/.git
+/.husky/_
+/.idea
 /dist
 /coverage

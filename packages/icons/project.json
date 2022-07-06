@@ -1,0 +1,48 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/icons/src",
+  "projectType": "library",
+  "tags": ["type:ui"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/icons",
+        "tsConfig": "packages/icons/tsconfig.lib.json",
+        "project": "packages/icons/package.json",
+        "entryFile": "packages/icons/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "packages/icons/rollup.config.js",
+        "compiler": "swc",
+        "assets": [
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/icons/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/icons/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/icons"],
+      "options": {
+        "jestConfig": "packages/icons/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
