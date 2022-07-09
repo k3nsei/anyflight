@@ -19,7 +19,7 @@
     "start:ui": "nx run ui:storybook"
   },
   "dependencies": {
-    "@angular/animations": "~14.0.4",
+    "@angular/animations": "~14.0.5",
     "@angular/cdk": "~14.0.4",
     "@angular/common": "~14.0.4",
     "@angular/compiler": "~14.0.4",
