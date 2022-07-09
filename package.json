@@ -40,7 +40,7 @@
     "@angular-eslint/template-parser": "~14.0.0",
     "@angular/cli": "~14.0.4",
     "@angular/compiler-cli": "~14.0.4",
-    "@angular/language-service": "~14.0.4",
+    "@angular/language-service": "~14.0.5",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@nrwl/angular": "14.4.0",
