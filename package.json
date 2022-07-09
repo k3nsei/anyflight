@@ -52,7 +52,7 @@
     "@nrwl/node": "14.4.0",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/storybook": "14.4.0",
-    "@nrwl/web": "14.4.0",
+    "@nrwl/web": "14.4.2",
     "@nrwl/workspace": "14.4.0",
     "@storybook/addon-essentials": "~6.5.9",
     "@storybook/angular": "~6.5.9",
