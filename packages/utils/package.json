@@ -10,7 +10,7 @@
   "license": "GPL-3.0",
   "author": "The Anyflight open source project",
   "dependencies": {
-    "@swc/helpers": "~0.3.3"
+    "@swc/helpers": "~0.4.3"
   },
   "devDependencies": {
     "type-fest": "^2.18.0"
